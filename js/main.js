@@ -2,9 +2,11 @@ requirejs.config({
 	baseUrl: "js/app/",
 	
 	paths : {
+		'_' : '../../assets/underscore-min',
 		Bootstrap : '../../assets/bootstrap/js/bootstrap.min',
 		Backbone : '../../assets/backbone-min',
-		'_' : '../../assets/underscore-min'
+		Handlebars : '../../assets/handlebars',
+		text : '../../assets/require-text'
 	},
 	
 	shim : {
@@ -25,7 +27,9 @@ requirejs.config({
 		'Handlebars' : {
 			exports: 'Handlebars'
 		}
-	}
+	},
+	
+	//urlArgs: "rand=" + Math.random()
 });
 
 require(['Backbone', 'router'], 
